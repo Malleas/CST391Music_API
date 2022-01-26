@@ -1,0 +1,41 @@
+{
+  "name": "Music_API",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon -e js,ts --watch ./index.js --watch app --ignore 'lib/*' --exec 'npm run build && node ./index.js' ",
+    "debug": "nodemon -e js,ts --watch ./index.js --watch app --ignore 'lib/*' --exec 'npm run build && node --inspect ./index.js' ",
+    "build": "babel app --out-dir lib/app --extensions \".ts,.tsx\" --source-maps inline"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/es6-promise": "^3.3.0",
+    "body-parser": "^1.19.1",
+    "express": "^4.17.2",
+    "install": "^0.13.0",
+    "mysql": "^2.18.1",
+    "nodemon": "^2.0.15",
+    "npm": "^8.3.2",
+    "util": "^0.12.4"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.0",
+    "@babel/core": "^7.2.0",
+    "@babel/node": "^7.2.0",
+    "@babel/plugin-proposal-class-properties": "^7.2.1",
+    "@babel/plugin-proposal-object-rest-spread": "^7.2.0",
+    "@babel/plugin-transform-runtime": "^7.2.0",
+    "@babel/polyfill": "^7.0.0",
+    "@babel/preset-env": "^7.2.0",
+    "@babel/preset-typescript": "^7.1.0",
+    "@babel/runtime": "^7.2.0",
+    "@types/mysql": "^2.15.20",
+    "esnext": "^3.3.1",
+    "lib": "^4.3.3",
+    "tsc": "^2.0.4",
+    "typescript": "^3.9.10"
+  }
+}
